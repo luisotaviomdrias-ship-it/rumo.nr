@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rumo — Organize seu dinheiro, siga seu rumo</title>
-<meta name="description" content="Rumo é o SaaS de controle financeiro pessoal e profissional: receitas, despesas, orçamento, metas, cartões, relatórios, IA financeira e exportação para Excel em um só lugar.">
+<meta name="description" content="Saiba para onde seu dinheiro vai. Organize receitas, gastos e metas, separe pessoal e trabalho e exporte para Excel com o Rumo. Conheça a demonstração e os planos.">
+<meta name="theme-color" content="#2F6F5E">
+<link rel="canonical" href="https://rumo-nr.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Rumo — Seu dinheiro com direção">
+<meta property="og:description" content="Gastos, receitas e metas em um só lugar. Conheça o Rumo por dentro e escolha seu plano.">
+<meta property="og:url" content="https://rumo-nr.vercel.app/">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%232F6F5E'/%3E%3Cpath d='M30 55 L45 70 L72 32' stroke='white' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <!-- Segurança (defesa em profundidade): mesmo sendo um arquivo estático sem backend hoje,
      travamos de onde o navegador pode carregar scripts/estilos/fontes/imagens. Os scripts
@@ -599,6 +607,24 @@ tr:last-child td{border-bottom:none;}
 .file-drop span{display:block;font-size:12px;color:var(--ink-faint);}
 .preview-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
 @media(max-width:760px){.preview-mini-grid{grid-template-columns:1fr 1fr;}.preview-pane-grid{grid-template-columns:1fr;}.preview-stage{min-height:0;}.preview-table{overflow-x:auto;}}
+
+/* Conversion and accessibility refinements */
+#view-landing section[id]{scroll-margin-top:88px}
+.access-link{font:inherit;font-size:13px;color:var(--primary-dark);background:none;border:0;cursor:pointer;padding:10px 0;text-decoration:underline;text-underline-offset:4px}
+.hero{background:radial-gradient(ellipse at 90% 20%,#e4efea 0,transparent 58%);padding-top:64px}
+.hero .trust{color:var(--primary-dark);font-weight:500}
+.steps-grid article{padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--surface)}
+.step-num{font-size:13px;letter-spacing:2px;color:var(--primary);display:block;margin-bottom:24px}
+.steps-grid h3{font-size:23px;line-height:1.2;margin-bottom:12px}
+.steps-grid p,.faq-shell p{font-size:15px;color:var(--ink-soft);line-height:1.7}
+.plan{display:flex;flex-direction:column}.plan ul{flex:1}.plan .btn{margin-top:18px}
+.faq-shell{display:grid;grid-template-columns:1fr 1.5fr;gap:60px}.faq-shell h2{font-size:40px;margin-bottom:18px}
+.faq-list details{border-bottom:1px solid var(--border);padding:20px 0}.faq-list summary{cursor:pointer;font-size:17px;font-weight:600;line-height:1.5}.faq-list p{padding-top:14px}.faq-list a{text-decoration:underline;color:var(--primary)}
+.final-cta{text-align:center;background:var(--primary-tint)}.final-cta h2{font-size:42px;line-height:1.15}.final-cta p{margin:20px auto 26px;color:var(--ink-soft)}.final-cta .btn{margin:5px}
+.mobile-conversion{display:none}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+@media(max-width:700px){.hero{padding-top:36px}.hero-grid{gap:26px}.faq-shell{grid-template-columns:1fr;gap:24px}.faq-shell h2,.final-cta h2{font-size:32px}.nav-cta{gap:12px}.nav-cta>.btn{font-size:12px;padding:11px}.nav-row{gap:10px}.mobile-conversion{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 20px calc(10px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;background:rgba(250,250,247,.97);border-top:1px solid var(--border)}.mobile-conversion span{font-weight:600}.mobile-conversion small{display:block;font-size:11px;font-weight:400;color:var(--ink-soft)}#view-landing footer{padding-bottom:110px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -608,35 +634,35 @@ tr:last-child td{border-bottom:none;}
     <a href="#" class="logo"><span class="mark"></span>Rumo</a>
     <nav class="links">
       <a href="#recursos">Recursos</a>
-      <a href="#tudo-em-um">Como funciona</a>
+      <a href="#como-comecar">Como funciona</a>
       <a href="#planos">Planos</a>
     </nav>
     <div class="nav-cta">
-      
+      <button type="button" class="access-link" onclick="openAccessCheckModal()">Já sou cliente</button>
       <a href="#planos" class="btn btn-primary">Começar agora</a>
     </div>
   </div>
 </header>
-<div class="launch-note"><span class="pulse" aria-hidden="true"></span><span><strong>Rumo em fase final de lançamento</strong> · a hospedagem está sendo preparada e ficará disponível em breve.</span></div>
+
 
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <span class="eyebrow"><span class="dot"></span>Controle financeiro pessoal e profissional</span>
-      <h1>Seu dinheiro mais organizado. Sua vida mais tranquila.</h1>
-      <p class="sub">Controle seus gastos, acompanhe suas receitas, estabeleça metas e descubra como melhorar sua vida financeira em poucos minutos por mês.</p>
+      <h1>Saiba para onde vai.<br><span style="color:var(--primary)">Decida o próximo passo.</span></h1>
+      <p class="sub">Seu dinheiro da casa e do trabalho, organizado em um só lugar. Acompanhe o que entra, entenda seus gastos e tire suas metas do papel.</p>
       <div class="cta-row">
         <a href="#planos" class="btn btn-primary">Começar agora</a>
-        <a href="#previa-saas" class="btn btn-ghost">Ver prévia do SaaS</a>
+        <a href="#previa-saas" class="btn btn-ghost">Explorar demonstração</a>
       </div>
-      <p class="trust">Sem plano gratuito limitado — feito para quem leva as finanças a sério.</p>
+      <p class="trust">A partir de R$ 14,90/mês · Demonstração sem cadastro</p>
     </div>
     <div class="hero-visual">
       <div class="hero-blob"></div>
       <div class="dash-card">
         <div class="dh-top">
           <div>
-            <div class="who">Bom dia 👋</div>
+            <div class="who">Seu mês em um olhar · exemplo</div>
           </div>
           <div class="avatar">🙂</div>
         </div>
@@ -669,13 +695,13 @@ tr:last-child td{border-bottom:none;}
   <div class="container preview-shell">
     <div class="preview-copy reveal">
       <span class="eyebrow"><span class="dot"></span>Conheça o Rumo por dentro</span>
-      <h2>Veja o que o cliente encontra depois de assinar.</h2>
-      <p>Uma prévia navegável mostra a experiência real do produto: visão geral, metas, cartões e análise inteligente. Os números abaixo são demonstrativos.</p>
+      <h2>Veja seu dinheiro com mais clareza.</h2>
+      <p>Explore os exemplos abaixo e descubra como acompanhar seu mês. Valores fictícios para demonstrar os recursos; não representam resultados garantidos.</p>
       <div class="preview-tabs" role="tablist" aria-label="Prévia do Rumo">
         <button class="preview-tab active" data-preview-tab="dashboard" role="tab" aria-selected="true">📊 Dashboard</button>
         <button class="preview-tab" data-preview-tab="metas" role="tab" aria-selected="false">🎯 Metas</button>
         <button class="preview-tab" data-preview-tab="cartoes" role="tab" aria-selected="false">💳 Cartões</button>
-        <button class="preview-tab" data-preview-tab="ia" role="tab" aria-selected="false">✨ IA Pro</button>
+        <button class="preview-tab" data-preview-tab="ia" role="tab" aria-selected="false">✨ Análises Pro</button>
       </div>
       <div class="preview-points">
         <div class="preview-point"><strong>📈 Visão clara</strong>Saldo, receitas e despesas em poucos segundos.</div>
@@ -687,7 +713,7 @@ tr:last-child td{border-bottom:none;}
         <button type="button" class="btn btn-primary" onclick="openSaasPreview()">Abrir prévia completa</button>
         <a href="#planos" class="btn btn-ghost">Ver planos</a>
       </div>
-      <div class="preview-security"><div>🔒</div><div><b>Pagamento e acesso separados</b>A Cakto processa a compra. A liberação definitiva do SaaS acontece somente após a confirmação no servidor.</div></div>
+      <div class="preview-security"><div>🔒</div><div><b>Explore antes de escolher</b>Conheça os recursos com dados fictícios. Nenhum cartão é necessário para ver a demonstração.</div></div>
     </div>
 
     <div class="preview-frame reveal" aria-label="Demonstração do dashboard do Rumo">
@@ -780,7 +806,7 @@ tr:last-child td{border-bottom:none;}
   <div class="container">
     <div class="section-head reveal">
       <h2>Tudo o que você precisa para entender seu dinheiro</h2>
-      <p>Recursos pensados para o dia a dia — não uma planilha disfarçada de site.</p>
+      <p>Do primeiro gasto registrado ao planejamento do próximo mês.</p>
     </div>
     <div class="grid-3">
       <div class="benefit reveal"><div class="icon ic-a">💳</div><h3>Controle seus gastos</h3><p>Saiba exatamente onde seu dinheiro está sendo utilizado, categoria por categoria.</p></div>
@@ -788,11 +814,21 @@ tr:last-child td{border-bottom:none;}
       <div class="benefit reveal"><div class="icon ic-c">🎯</div><h3>Alcance suas metas</h3><p>Crie objetivos financeiros e acompanhe seu progresso com clareza.</p></div>
       <div class="benefit reveal"><div class="icon ic-b">📊</div><h3>Entenda seus hábitos</h3><p>Veja gráficos e relatórios para descobrir onde você pode economizar.</p></div>
       <div class="benefit reveal"><div class="icon ic-a">🗂️</div><h3>Organize sua vida financeira</h3><p>Separe suas finanças pessoais das profissionais sem misturar tudo.</p></div>
-      <div class="benefit reveal"><div class="icon ic-c">✨</div><h3>Tenha ajuda da IA</h3><p>Receba análises e sugestões baseadas nos seus próprios dados.</p></div>
+      <div class="benefit reveal"><div class="icon ic-c">✨</div><h3>Entenda seus números</h3><p>Receba análises e sugestões baseadas nos seus próprios dados.</p></div>
     </div>
   </div>
 </section>
 
+<section id="como-comecar" class="section-soft">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">UMA ROTINA MAIS LEVE</span><h2>Do registro à clareza, em três passos.</h2></div>
+    <div class="grid-3 steps-grid">
+      <article><span class="step-num">01</span><h3>Registre o que entra e sai</h3><p>Adicione suas movimentações ou importe uma planilha. Cada valor ganha seu lugar.</p></article>
+      <article><span class="step-num">02</span><h3>Separe casa e trabalho</h3><p>Visualize cada área da sua vida e entenda o que está consumindo seu orçamento.</p></article>
+      <article><span class="step-num">03</span><h3>Planeje seu próximo objetivo</h3><p>Defina limites, acompanhe metas e consulte seu progresso no painel.</p></article>
+    </div>
+  </div>
+</section>
 <section id="tudo-em-um" class="section-soft">
   <div class="container">
     <div class="section-head reveal">
@@ -807,7 +843,7 @@ tr:last-child td{border-bottom:none;}
       <div class="eco-item reveal"><div class="glyph">🎯</div><span>Metas</span></div>
       <div class="eco-item reveal"><div class="glyph">📐</div><span>Orçamentos</span></div>
       <div class="eco-item reveal"><div class="glyph">📈</div><span>Relatórios</span></div>
-      <div class="eco-item reveal"><div class="glyph">✨</div><span>IA financeira</span></div>
+      <div class="eco-item reveal"><div class="glyph">✨</div><span>Assistente financeira</span></div>
       <div class="eco-item reveal"><div class="glyph">📥</div><span>Exportação Excel</span></div>
       <div class="eco-item reveal"><div class="glyph">👤</div><span>Pessoal e trabalho</span></div>
     </div>
@@ -860,7 +896,7 @@ tr:last-child td{border-bottom:none;}
           <li><span class="mark">✓</span>Controle completo de entradas e saídas</li>
           <li><span class="mark">✓</span>Planejamento mensal por categoria</li>
           <li><span class="mark">✓</span>Metas com progresso visual</li>
-          <li><span class="mark">✓</span>Relatórios e IA financeira</li>
+          <li><span class="mark">✓</span>Relatórios e Assistente financeira</li>
         </ul>
       </div>
     </div>
@@ -871,7 +907,7 @@ tr:last-child td{border-bottom:none;}
   <div class="container">
     <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
       <h2>Planos para cada estágio da sua organização</h2>
-      <p style="margin-left:auto;margin-right:auto;">Sem versão gratuita limitada — dois planos completos, feitos para entregar valor real.</p>
+      <p style="margin-left:auto;margin-right:auto;">Comece com o Essencial para organizar sua rotina. Escolha o Pro para acompanhar também cartões e análises automáticas.</p>
     </div>
     <div class="billing-toggle-wrap reveal">
       <div class="billing-control">
@@ -893,7 +929,7 @@ tr:last-child td{border-bottom:none;}
         <a id="checkout-essencial" href="https://pay.cakto.com.br/yzeoqts_1100046" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block" data-checkout-plan="essencial">Assinar agora</a>
       </div>
       <div class="plan pro reveal" data-plan-card="pro">
-        <span class="plan-badge">Mais escolhido</span>
+        <span class="plan-badge">Mais recursos</span>
         <h3>Pro</h3>
         <div class="price"><span id="price-pro">R$ 24,90</span><span class="period" id="period-pro">/mês</span></div>
         <p class="save-note" id="save-pro">Economize no anual</p>
@@ -905,6 +941,22 @@ tr:last-child td{border-bottom:none;}
   </div>
 </section>
 
+<section id="duvidas">
+  <div class="container faq-shell">
+    <div><span class="eyebrow">ANTES DE ESCOLHER</span><h2>Suas dúvidas,<br>com clareza.</h2><p>Entenda o que está incluído e como o Rumo funciona.</p></div>
+    <div class="faq-list">
+      <details><summary>Qual plano faz sentido para mim?</summary><p>O Essencial reúne receitas, despesas, orçamento, metas, gráficos e planilhas, com separação entre pessoal e trabalho. O Pro inclui esses recursos e acrescenta cartões, parcelamentos, relatórios avançados e análises automáticas.</p></details>
+      <details><summary>Posso conhecer antes de assinar?</summary><p>Sim. A demonstração nesta página usa dados fictícios e não exige cadastro nem cartão. <a href="#previa-saas">Explorar a demonstração</a>.</p></details>
+      <details><summary>Como funciona o plano anual?</summary><p>O valor exibido no anual é o total de 12 meses: R$ 149,90 no Essencial ou R$ 249,90 no Pro. O equivalente mensal serve para comparação. Confira as condições de cobrança no checkout da Cakto.</p></details>
+      <details><summary>Preciso conectar minha conta bancária?</summary><p>Não. Você registra suas movimentações ou importa uma planilha. O Rumo não pede sua senha bancária e não sincroniza transações automaticamente com bancos.</p></details>
+      <details><summary>Onde ficam meus dados?</summary><p>Nesta versão, os registros financeiros ficam no navegador e dispositivo utilizados. Não há sincronização automática entre aparelhos. Exporte suas planilhas regularmente; limpar os dados do navegador pode apagar os registros.</p></details>
+      <details><summary>Como funciona a assistente do Pro?</summary><p>Ela faz cálculos e análises automáticas dos registros que você adiciona, como maiores gastos e progresso das metas. Nesta versão, usa regras locais e não um modelo de IA generativa.</p></details>
+      <details><summary>Já paguei. Como verifico meu acesso?</summary><p>Use o botão “Já sou cliente” e informe o e-mail da compra. A assinatura precisa ser confirmada pelo serviço de acesso. Se a confirmação estiver indisponível, consulte os dados de contato do vendedor no comprovante da Cakto.</p><button type="button" class="btn btn-ghost" onclick="openAccessCheckModal()">Verificar meu acesso</button></details>
+    </div>
+  </div>
+</section>
+<section class="final-cta"><div class="container"><span class="eyebrow">SEU DINHEIRO COM DIREÇÃO</span><h2>Seu próximo passo começa<br>com uma visão mais clara.</h2><p>Conheça o Rumo por dentro e encontre o plano para sua rotina.</p><a class="btn btn-primary" href="#planos">Escolher meu plano</a><a class="btn btn-ghost" href="#previa-saas">Ver demonstração</a></div></section>
+<div class="mobile-conversion"><span>Rumo <small>A partir de R$ 14,90/mês</small></span><a class="btn btn-primary" href="#planos">Ver planos</a></div>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -912,10 +964,9 @@ tr:last-child td{border-bottom:none;}
         <a href="#" class="logo"><span class="mark"></span>Rumo</a>
         <p style="margin-top:14px;font-size:13.5px;color:var(--ink-soft);max-width:220px;line-height:1.6;">Organize suas finanças pessoais e profissionais em um só lugar.</p>
       </div>
-      <div><h4>Produto</h4><ul><li><a href="#recursos">Recursos</a></li><li><a href="#tudo-em-um">Como funciona</a></li><li><a href="#planos">Planos</a></li></ul></div>
-      <div><h4>Empresa</h4><ul><li><a href="#">Sobre</a></li><li><a href="#">Carreiras</a></li><li><a href="#">Contato</a></li></ul></div>
-      <div><h4>Suporte</h4><ul><li><a href="#">Central de ajuda</a></li><li><a href="#">Fale conosco</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="#">Termos de uso</a></li><li><a href="#">Privacidade</a></li></ul></div>
+      <div><h4>Produto</h4><ul><li><a href="#recursos">Recursos</a></li><li><a href="#como-comecar">Como funciona</a></li><li><a href="#planos">Planos</a></li></ul></div>
+      <div><h4>Conheça</h4><ul><li><a href="#previa-saas">Demonstração</a></li><li><a href="#por-que">Por que Rumo?</a></li></ul></div>
+      <div><h4>Ajuda</h4><ul><li><a href="#duvidas">Dúvidas frequentes</a></li><li><button class="access-link" type="button" onclick="openAccessCheckModal()">Já sou cliente</button></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Rumo. Todos os direitos reservados.</span>
@@ -924,9 +975,9 @@ tr:last-child td{border-bottom:none;}
   </div>
 </footer>
 </div>
-<div id="saasPreviewOverlay" class="modal-overlay" aria-hidden="true" style="display:none;">
+<div id="saasPreviewOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Demonstração do Rumo" aria-hidden="true" style="display:none;">
   <div class="modal preview-modal">
-    <div class="modal-head"><div><h3>Prévia completa do Rumo</h3><p style="font-size:12px;color:var(--ink-soft);margin-top:3px;">Explore uma demonstração do painel antes de assinar.</p></div><button class="modal-close" type="button" onclick="closeSaasPreview()">✕</button></div>
+    <div class="modal-head"><div><h3>Prévia completa do Rumo</h3><p style="font-size:12px;color:var(--ink-soft);margin-top:3px;">Explore uma demonstração do painel antes de assinar.</p></div><button class="modal-close" type="button" onclick="closeSaasPreview()" aria-label="Fechar demonstração">✕</button></div>
     <div class="preview-modal-grid">
       <div class="preview-pane-card">
         <div class="card-head"><span class="section-title">O que você encontra</span></div>
@@ -935,7 +986,7 @@ tr:last-child td{border-bottom:none;}
           <div class="preview-list-row"><span>💵</span><span class="label">Receitas e despesas</span><b>Ativo</b></div>
           <div class="preview-list-row"><span>🎯</span><span class="label">Metas financeiras</span><b>Ativo</b></div>
           <div class="preview-list-row"><span>💳</span><span class="label">Cartões e parcelas</span><b>Pro</b></div>
-          <div class="preview-list-row"><span>✨</span><span class="label">IA financeira</span><b>Pro</b></div>
+          <div class="preview-list-row"><span>✨</span><span class="label">Assistente financeira</span><b>Pro</b></div>
           <div class="preview-list-row"><span>📥</span><span class="label">Exportação para Excel</span><b>Ativo</b></div>
         </div>
         <div class="preview-security"><div>🛡️</div><div><b>Dados de demonstração</b>Esta área usa somente informações fictícias. Os dados reais do cliente ficarão associados ao acesso validado pelo backend.</div></div>
@@ -966,7 +1017,7 @@ tr:last-child td{border-bottom:none;}
       <a href="#" class="side-link" data-page="goals"><span class="i">🎯</span>Metas</a>
       <a href="#" class="side-link" data-page="cards"><span class="i">💳</span>Cartões</a>
       <a href="#" class="side-link" data-page="reports"><span class="i">📈</span>Relatórios</a>
-      <a href="#" class="side-link" data-page="ai"><span class="i">✨</span>IA financeira</a>
+      <a href="#" class="side-link" data-page="ai"><span class="i">✨</span>Assistente financeira</a>
       <div class="side-divider"></div>
       <a href="#" class="side-link" data-page="settings"><span class="i">⚙️</span>Configurações</a>
       <a href="#" class="side-link" onclick="logoutAndExit();return false;"><span class="i">↩</span>Sair para o site</a>
@@ -1159,7 +1210,7 @@ tr:last-child td{border-bottom:none;}
       <div class="page">
         <div class="lock-card" id="ai-lock" style="display:none;">
           <div class="lock-ic">🔒</div>
-          <h3>Assistente de IA financeiro</h3>
+          <h3>Assistente de análise financeira</h3>
           <p>Este recurso faz parte do plano Pro.</p>
           <button class="btn btn-primary" onclick="goUpgrade()">Conhecer o Pro</button>
         </div>
@@ -2322,7 +2373,7 @@ const FEATURE_LABELS = {
   dashboard:'Dashboard financeiro', transacoes:'Controle de receitas e despesas', categorias:'Categorias personalizadas',
   orcamento:'Controle de orçamento mensal', metas:'Metas financeiras', escopo:'Separação entre pessoal e trabalho',
   graficos:'Gráficos financeiros', exportar_excel:'Importação e exportação para Excel/planilha', historico:'Histórico de movimentações',
-  relatorios_basicos:'Relatórios básicos', ia_financeira:'Assistente de IA financeiro', analise_inteligente:'Análise inteligente dos gastos',
+  relatorios_basicos:'Relatórios básicos', ia_financeira:'Assistente de análise financeira', analise_inteligente:'Análise inteligente dos gastos',
   relatorios_avancados:'Relatórios avançados', previsao_financeira:'Previsão financeira', cartoes:'Controle de cartões',
   parcelamentos:'Parcelamentos', alertas_financeiros:'Alertas financeiros', insights_automaticos:'Insights automáticos',
   planejamento_avancado:'Planejamento financeiro avançado', relatorio_inteligente:'Relatório Financeiro Inteligente',
@@ -2405,9 +2456,9 @@ function applyPlanUIState(){
 function updatePricingButtonLabels(cycle){
   const e=document.getElementById('checkout-essencial');
   const p=document.getElementById('checkout-pro');
-  const suffix=cycle==='anual'?'Assinar plano anual':'Assinar agora';
-  if(e) e.textContent=suffix;
-  if(p) p.textContent=suffix;
+  const suffix=cycle==='anual'?' anual':' mensal';
+  if(e) e.textContent='Escolher Essencial'+suffix;
+  if(p) p.textContent='Escolher Pro'+suffix;
 }
 
 function renderPricing(cycle){
@@ -2418,8 +2469,8 @@ function renderPricing(cycle){
     document.getElementById('period-'+planKey).textContent=cycle==='mensal'?'/mês':'/ano';
     document.getElementById('features-'+planKey).innerHTML=cfg.features.map(f=>`<li><span class="mark">✓</span>${escapeHtml(f)}</li>`).join('');
     const saveEl=document.getElementById('save-'+planKey);
-    if(cycle==='anual'){ const mensal=PLANS_CONFIG[planKey+'_mensal']; const pct=((mensal.price*12-cfg.price)/(mensal.price*12))*100; saveEl.textContent=`Equivale a ${fmtBRL(cfg.price/12)}/mês · economia de ${pct.toFixed(0)}% no plano anual`; }
-    else saveEl.textContent='';
+    if(cycle==='anual'){ const mensal=PLANS_CONFIG[planKey+'_mensal']; const pct=((mensal.price*12-cfg.price)/(mensal.price*12))*100; saveEl.textContent=`Total anual · equivale a ${fmtBRL(cfg.price/12)}/mês · economize ${fmtBRL(mensal.price*12-cfg.price)} por ano`; }
+    else saveEl.textContent='Cobrança mensal · veja as condições na Cakto';
   });
 updateCheckoutLinks(cycle);
   updatePricingButtonLabels(cycle);
@@ -2449,7 +2500,7 @@ function rememberPurchaseIntent(planKey){
   const cfg=PLANS_CONFIG[planKey+'_'+(state.billingCycle||'mensal')];
   if(!cfg) return null;
   const intent={planKey:cfg.id,plan:cfg.plan,billing_cycle:cfg.billing_cycle,cakto_product_id:cfg.cakto_product_id,created_at:new Date().toISOString()};
-  sessionStorage.setItem('rumo_purchase_intent',JSON.stringify(intent));
+  try{ sessionStorage.setItem('rumo_purchase_intent',JSON.stringify(intent)); }catch(_){ /* Checkout remains available when browser storage is blocked. */ }
   return intent;
 }
 function getPurchaseIntent(){
@@ -2665,13 +2716,15 @@ function exitApp(){
 }
 
 
+let previewReturnFocus=null;
 function openSaasPreview(){
+  previewReturnFocus=document.activeElement;
   const o=document.getElementById('saasPreviewOverlay'); if(!o) return;
-  o.style.display='flex'; o.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+  o.style.display='flex'; o.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; o.querySelector('button')?.focus();
 }
 function closeSaasPreview(){
   const o=document.getElementById('saasPreviewOverlay'); if(!o) return;
-  o.style.display='none'; o.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+  o.style.display='none'; o.setAttribute('aria-hidden','true'); document.body.style.overflow=''; previewReturnFocus?.focus();
 }
 
 
@@ -2737,5 +2790,18 @@ if(location.hash==='#app'){
 </script>
 
 
+<script>
+document.addEventListener('keydown',e=>{
+ const dialog=document.getElementById('saasPreviewOverlay');
+ if(dialog.getAttribute('aria-hidden')!=='false')return;
+ if(e.key==='Escape'){closeSaasPreview();return;}
+ if(e.key==='Tab'){
+  const items=[...dialog.querySelectorAll('button,a[href]')];const first=items[0],last=items[items.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+ }
+});
+</script>
 </body>
 </html>
+
