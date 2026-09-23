@@ -625,6 +625,11 @@ tr:last-child td{border-bottom:none;}
 @media(max-width:700px){.hero{padding-top:36px}.hero-grid{gap:26px}.faq-shell{grid-template-columns:1fr;gap:24px}.faq-shell h2,.final-cta h2{font-size:32px}.nav-cta{gap:12px}.nav-cta>.btn{font-size:12px;padding:11px}.nav-row{gap:10px}.mobile-conversion{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 20px calc(10px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;background:rgba(250,250,247,.97);border-top:1px solid var(--border)}.mobile-conversion span{font-weight:600}.mobile-conversion small{display:block;font-size:11px;font-weight:400;color:var(--ink-soft)}#view-landing footer{padding-bottom:110px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
+
+/* Ebook editorial: independent product, separate from SaaS subscriptions. */
+[data-ebook-buy][hidden],[data-ebook-unavailable][hidden]{display:none!important}.ebook-paths{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}.ebook-paths>a{padding:22px;border:1px solid var(--border);border-radius:18px;background:var(--surface);text-decoration:none;color:var(--ink);transition:transform .2s}.ebook-paths>a:hover{transform:translateY(-3px);border-color:var(--primary)}.ebook-paths b{display:block;font-size:18px;margin:7px 0}.ebook-paths small{color:var(--ink-soft);line-height:1.6;display:block}.ebook-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}.ebook-cover{background:#163c32;color:#f7f4ed;padding:44px 32px;border-radius:5px 18px 18px 5px;box-shadow:14px 18px 0 #dfded0,0 25px 45px #163c3220;max-width:310px;min-height:400px;margin:0 auto;border-left:9px solid #0f2e26;position:relative;overflow:hidden}.ebook-cover:after{content:'';position:absolute;width:230px;height:230px;border:1px solid #b78c4560;border-radius:50%;bottom:-100px;right:-80px}.ebook-cover .ebook-brand{letter-spacing:.2em;font-size:13px;color:#d5b374}.ebook-cover h3{font-family:Fraunces,Georgia,serif;font-size:44px;line-height:1.12;margin:46px 0 20px;color:#fff}.ebook-cover p{font-size:14px;line-height:1.6;color:#e3e8df}.ebook-cover small{display:block;margin-top:40px;color:#d5b374;letter-spacing:.08em}.ebook-copy h2{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.15;margin:14px 0}.ebook-copy>p{color:var(--ink-soft);line-height:1.8}.ebook-badges{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.ebook-badges span{font-size:12px;border-radius:50px;padding:7px 12px;background:var(--primary-tint);color:var(--primary-dark)}.ebook-lessons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0;list-style:none;padding:0}.ebook-lessons li{font-size:14px;line-height:1.6;padding-left:19px;position:relative}.ebook-lessons li:before{content:'✓';position:absolute;left:0;color:var(--primary)}.ebook-note{font-size:12px!important;color:var(--ink-soft);margin-top:14px;line-height:1.7}.ebook-status{display:inline-block;border-radius:8px;background:#ecece5;padding:12px 16px;color:var(--ink-soft);font-size:13px}.ebook-detail{margin-top:38px;border-top:1px solid var(--border);padding-top:22px}.ebook-detail summary{cursor:pointer;font-weight:600;padding:10px 0}.ebook-detail p{line-height:1.8;color:var(--ink-soft);margin-top:10px}.ebook-preview-link{display:inline-block;margin:14px 14px 0 0}.ebook-panel{max-width:1050px;padding:24px}.ebook-panel .ebook-layout{gap:36px}.ebook-panel .ebook-cover{min-height:340px}.ebook-panel .ebook-cover h3{font-size:36px}.ebook-panel .ebook-copy h2{font-size:32px}
+@media(max-width:700px){.ebook-paths,.ebook-layout{grid-template-columns:1fr}.ebook-layout{gap:42px}.ebook-cover{min-height:340px;max-width:270px;padding:30px 26px}.ebook-cover h3{font-size:37px;margin-top:32px}.ebook-lessons{grid-template-columns:1fr}.ebook-panel{padding:8px}.ebook-panel .ebook-layout{gap:32px}}
+
 </style>
 </head>
 <body>
@@ -636,6 +641,7 @@ tr:last-child td{border-bottom:none;}
       <a href="#recursos">Recursos</a>
       <a href="#como-comecar">Como funciona</a>
       <a href="#planos">Planos</a>
+      <a href="#ebook">Ebook</a>
     </nav>
     <div class="nav-cta">
       <button type="button" class="access-link" onclick="openAccessCheckModal()">Já sou cliente</button>
@@ -656,6 +662,7 @@ tr:last-child td{border-bottom:none;}
         <a href="#previa-saas" class="btn btn-ghost">Explorar demonstração</a>
       </div>
       <p class="trust">A partir de R$ 14,90/mês · Demonstração sem cadastro</p>
+      
     </div>
     <div class="hero-visual">
       <div class="hero-blob"></div>
@@ -903,6 +910,8 @@ tr:last-child td{border-bottom:none;}
   </div>
 </section>
 
+<section id="ebook" class="section-soft"><div class="container"><div class="ebook-layout"><div class="ebook-cover" role="img" aria-label="Capa do ebook Rumo: Dinheiro em ordem, edição ilustrada em PDF"><span class="ebook-brand">RUMO / GUIA PRÁTICO</span><h3>Dinheiro<br>em ordem.</h3><p>Entenda suas contas.<br/>Crie uma rotina possível.<br/>Dê o próximo passo.</p><small>EDIÇÃO ILUSTRADA · 27 PÁGINAS</small></div><div class="ebook-copy"><span class="eyebrow">APRENDA. APLIQUE. REVISE.</span><h2>O primeiro passo é<br>entender seu dinheiro.</h2><p>Você olha o saldo e ainda não sabe quanto pode gastar? O ebook <strong>Dinheiro em ordem</strong> mostra como organizar contas, enxergar compromissos e construir uma rotina simples, com exemplos visuais para colocar em prática.</p><div class="ebook-badges"><span>PDF ilustrado</span><span>27 páginas</span><span>Plano de 7 dias + rotina de 30 dias</span></div><ul class="ebook-lessons"><li>Descubra o saldo realmente livre.</li><li>Organize contas e vencimentos.</li><li>Controle cartão sem duplicar gastos.</li><li>Separe dinheiro de casa e trabalho.</li><li>Planeje metas e renda variável.</li><li>Aplique fichas e exercícios resolvidos.</li></ul><div><a class="btn btn-primary ebook-preview-link" href="/assets/rumo-ebook-amostra.pdf" target="_blank" rel="noopener">Ler amostra grátis (PDF)</a><span class="ebook-status" data-ebook-unavailable>Compra disponível em breve</span><a class="btn btn-ghost ebook-preview-link" data-ebook-buy hidden target="_blank" rel="noopener noreferrer">Comprar ebook</a></div><p class="ebook-note">Um único ebook ilustrado, em PDF. A amostra pública contém 4 páginas selecionadas. O material funciona com papel, planilha ou aplicativo e não inclui assinatura do Rumo.</p></div></div><details class="ebook-detail"><summary>O que você encontra no ebook completo?</summary><p>Sete etapas de organização financeira; exemplos de orçamento, calendário e cartão; um mês acompanhado do início ao fim; exercícios com respostas; 12 páginas de aplicação visual; fichas do mês e de compromissos; um roteiro de 30 dias e orientações para levar o método ao Rumo. As fichas podem ser impressas ou preenchidas com a ferramenta de anotação do seu leitor de PDF; não fazem cálculos automáticos.</p></details><details class="ebook-detail"><summary>Preciso assinar o aplicativo para usar o ebook?</summary><p>Não. O ebook ensina o método e funciona sozinho. A assinatura do Rumo oferece o aplicativo para acompanhar a rotina. São produtos separados; comprar um não libera automaticamente o outro.</p></details></div></section>
+
 <section id="planos" class="section-soft">
   <div class="container">
     <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
@@ -964,7 +973,7 @@ tr:last-child td{border-bottom:none;}
         <a href="#" class="logo"><span class="mark"></span>Rumo</a>
         <p style="margin-top:14px;font-size:13.5px;color:var(--ink-soft);max-width:220px;line-height:1.6;">Organize suas finanças pessoais e profissionais em um só lugar.</p>
       </div>
-      <div><h4>Produto</h4><ul><li><a href="#recursos">Recursos</a></li><li><a href="#como-comecar">Como funciona</a></li><li><a href="#planos">Planos</a></li></ul></div>
+      <div><h4>Produto</h4><ul><li><a href="#ebook">Ebook ilustrado</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#como-comecar">Como funciona</a></li><li><a href="#planos">Planos</a></li></ul></div>
       <div><h4>Conheça</h4><ul><li><a href="#previa-saas">Demonstração</a></li><li><a href="#por-que">Por que Rumo?</a></li></ul></div>
       <div><h4>Ajuda</h4><ul><li><a href="#duvidas">Dúvidas frequentes</a></li><li><button class="access-link" type="button" onclick="openAccessCheckModal()">Já sou cliente</button></li></ul></div>
     </div>
@@ -1019,6 +1028,7 @@ tr:last-child td{border-bottom:none;}
       <a href="#" class="side-link" data-page="reports"><span class="i">📈</span>Relatórios</a>
       <a href="#" class="side-link" data-page="ai"><span class="i">✨</span>Assistente financeira</a>
       <div class="side-divider"></div>
+      <a href="#" class="side-link" data-page="ebook"><span class="i">📖</span>Ebook Rumo</a>
       <a href="#" class="side-link" data-page="settings"><span class="i">⚙️</span>Configurações</a>
       <a href="#" class="side-link" onclick="logoutAndExit();return false;"><span class="i">↩</span>Sair para o site</a>
     </nav>
@@ -1050,6 +1060,8 @@ tr:last-child td{border-bottom:none;}
         <div class="avatar-sm" id="topAvatarInitial">🙂</div>
       </div>
     </div>
+
+    <div class="page page-section" id="page-ebook"><div class="ebook-panel"><div class="page-head"><div><h2>Ebook Rumo</h2><p>Conheça o método e aplique no seu ritmo.</p></div></div><div class="ebook-layout"><div class="ebook-cover" role="img" aria-label="Capa do ebook Rumo: Dinheiro em ordem, edição ilustrada em PDF"><span class="ebook-brand">RUMO / GUIA PRÁTICO</span><h3>Dinheiro<br>em ordem.</h3><p>Entenda suas contas.<br/>Crie uma rotina possível.<br/>Dê o próximo passo.</p><small>EDIÇÃO ILUSTRADA · 27 PÁGINAS</small></div><div class="ebook-copy"><span class="eyebrow">APRENDA. APLIQUE. REVISE.</span><h2>O primeiro passo é<br>entender seu dinheiro.</h2><p>Você olha o saldo e ainda não sabe quanto pode gastar? O ebook <strong>Dinheiro em ordem</strong> mostra como organizar contas, enxergar compromissos e construir uma rotina simples, com exemplos visuais para colocar em prática.</p><div class="ebook-badges"><span>PDF ilustrado</span><span>27 páginas</span><span>Plano de 7 dias + rotina de 30 dias</span></div><ul class="ebook-lessons"><li>Descubra o saldo realmente livre.</li><li>Organize contas e vencimentos.</li><li>Controle cartão sem duplicar gastos.</li><li>Separe dinheiro de casa e trabalho.</li><li>Planeje metas e renda variável.</li><li>Aplique fichas e exercícios resolvidos.</li></ul><div><a class="btn btn-primary ebook-preview-link" href="/assets/rumo-ebook-amostra.pdf" target="_blank" rel="noopener">Ler amostra grátis (PDF)</a><span class="ebook-status" data-ebook-unavailable>Compra disponível em breve</span><a class="btn btn-ghost ebook-preview-link" data-ebook-buy hidden target="_blank" rel="noopener noreferrer">Comprar ebook</a></div><p class="ebook-note">Um único ebook ilustrado, em PDF. A amostra pública contém 4 páginas selecionadas. O material funciona com papel, planilha ou aplicativo e não inclui assinatura do Rumo.</p></div></div></div></div>
 
     <!-- OVERVIEW -->
     <div class="page page-section active" id="page-overview">
@@ -1523,7 +1535,7 @@ function toast(msg){
 /* =========================================================
    NAVEGAÇÃO
 ========================================================= */
-const pages = ['overview','transactions','categories','budget','goals','cards','reports','ai','settings'];
+const pages = ['overview','transactions','categories','budget','goals','cards','reports','ai','settings','ebook'];
 let currentPage = 'overview';
 function goToPage(p){
   currentPage = p;
@@ -2802,6 +2814,20 @@ document.addEventListener('keydown',e=>{
  }
 });
 </script>
+<script src="/ebook-config.js"></script>
+<script>
+// The ebook checkout is independent of subscription validation and never grants app access.
+(function(){
+  const config=window.RUMO_EBOOK || {};
+  let url;
+  try { url=new URL(config.checkoutUrl); } catch (_) { return; }
+  const allowed=['pay.cakto.com.br','pay.kiwify.com.br'];
+  if(url.protocol!=='https:' || !allowed.includes(url.hostname) || url.username || url.password || url.port || url.pathname==='/') return;
+  document.querySelectorAll('[data-ebook-buy]').forEach(function(a){a.href=url.href;a.hidden=false;});
+  document.querySelectorAll('[data-ebook-unavailable]').forEach(function(el){el.hidden=true;});
+})();
+</script>
 </body>
 </html>
+
 
